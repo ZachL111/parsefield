@@ -1,0 +1,32 @@
+{
+  "index": 10,
+  "phase": 1,
+  "batch": 2,
+  "name": "parsefield",
+  "planned_name": "parsefield",
+  "language": "Haskell",
+  "category": "Parsers",
+  "goal": "Build parser combinators with labels, alternatives, and expression examples.",
+  "repository_url": "https://github.com/ZachL111/parsefield",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 182,
+    "risk_penalty": 6,
+    "latency_penalty": 3,
+    "weight_bonus": 3,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
